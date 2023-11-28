@@ -17,7 +17,7 @@ const Navbar = () => {
         <Link href="/" className="btn btn-primary">
           Next.js
         </Link>
-        <ul className="menu menu-horizontal md:ml-8">
+        <ul className="menu menu-horizontal md:ml-8 flex gap-1">
           {links.map((link) => (
             <li key={link.href}>
               <Link href={link.href} className="capitalize">
