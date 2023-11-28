@@ -1,12 +1,14 @@
 import Link from "next/link";
 
-const Home = () => {
+const HomePage = () => {
+  console.log("home page");
   return (
     <div>
-      <h1 className="text-7xl">Home Page</h1>
-      <Link href="/about">About</Link>
+      <h1 className="text-7xl mb-8 font-bold">Next.js Tutorial</h1>
+      <Link href="/client" className="btn btn-accent">
+        get started
+      </Link>
     </div>
   );
 };
-
-export default Home;
+export default HomePage;

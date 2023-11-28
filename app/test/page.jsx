@@ -1,4 +1,13 @@
+"use client";
+import { useEffect } from "react";
+
 const page = () => {
+  useEffect(() => {
+    setTimeout(() => {
+      alert(1);
+    }, 250);
+  }, []);
+
   return (
     <div className="h-96 carousel carousel-vertical rounded-box">
       <div className="carousel-item h-full">
