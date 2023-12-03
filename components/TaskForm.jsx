@@ -1,10 +1,6 @@
-const createTask = async (formData) => {
-  "use server";
-  const content = formData.get("content");
-  console.log(content);
-};
+import { createTask } from "@/utils/actions";
 
-const taskForm = () => {
+const taskForm = async () => {
   return (
     <form action={createTask}>
       <div className="join w-full">
