@@ -3,7 +3,7 @@ import EditForm from "@/components/EditForm";
 import Link from "next/link";
 
 const SingleTask = async ({ params }) => {
-  const task = getTask(params.id);
+  const task = await getTask(params.id);
 
   return (
     <>
@@ -11,8 +11,8 @@ const SingleTask = async ({ params }) => {
         <Link href="/tasks" className="btn btn-accent">
           back to tasks
         </Link>
-        <EditForm task={task} />
       </div>
+      <EditForm task={task} />
     </>
   );
 };
