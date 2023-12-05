@@ -1,6 +1,6 @@
 import { createTask } from "@/utils/actions";
 
-const taskForm = async () => {
+const TaskForm = async () => {
   return (
     <form action={createTask}>
       <div className="join w-full">
@@ -18,4 +18,4 @@ const taskForm = async () => {
     </form>
   );
 };
-export default taskForm;
+export default TaskForm;
