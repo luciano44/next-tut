@@ -21,7 +21,7 @@ const TaskFormCustom = () => {
 
   return (
     <form action={formAction}>
-      {state.message && <p className="mb-2">{state.message}</p>}
+      {state.message && <p className="mb-2 text-orange-300">{state.message}</p>}
       <div className="join w-full">
         <input
           type="text"
