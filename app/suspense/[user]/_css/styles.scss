@@ -1,0 +1,49 @@
+.skeleton-anim {
+  position: relative;
+  display: flex;
+  height: 136px;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+  opacity: 0.2;
+  background-color: #fff;
+  animation: blink 1.5s linear infinite alternate;
+
+  div {
+    background-color: hsla(0, 0%, 0%, 0.5);
+    height: 20px;
+    width: 200px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+  }
+
+  :nth-child(1) {
+    width: 50%;
+  }
+}
+
+.skeleton-anim::after {
+  content: "";
+  position: absolute;
+  height: 200%;
+  width: 50%;
+  background-color: hsla(0, 0%, 0%, 0.2);
+  filter: blur(50px);
+  animation: skeleton 2s infinite ease;
+  top: -50%;
+}
+
+@keyframes skeleton {
+  from {
+    left: -55%;
+  }
+  to {
+    left: 105%;
+  }
+}
+
+@keyframes blink {
+  to {
+    opacity: 0.05;
+  }
+}
