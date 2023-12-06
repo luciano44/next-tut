@@ -1,10 +1,10 @@
-const GithubUser = async ({ user }) => {
+const GithubUser = async ({ user, time }) => {
   const res = await fetch(`https://api.github.com/users/${user}`);
   const data = await res.json();
 
-  console.log({ data });
+  // console.log({ data });
 
-  await new Promise((resolve) => setTimeout(resolve, 2500));
+  await new Promise((resolve) => setTimeout(resolve, time));
 
   return (
     <div className="bg-slate-600 p-2 rounded-xl my-3">
