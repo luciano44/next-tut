@@ -25,7 +25,7 @@ export const createTask = async (formData) => {
 };
 
 export const createTaskCustom = async (prevState, formData) => {
-  // await new Promise((resolve) => setTimeout(resolve, 750));
+  // await new Promise((resolve) => setTimeout(resolve, 1000));
 
   const content = formData.get("content");
   const Task = z.object({
@@ -47,6 +47,8 @@ export const createTaskCustom = async (prevState, formData) => {
 };
 
 export const deleteTask = async (formData) => {
+  // await new Promise((resolve) => setTimeout(resolve, 500));
+
   const id = formData.get("id");
 
   await prisma.task.delete({
@@ -56,6 +58,24 @@ export const deleteTask = async (formData) => {
   });
 
   revalidatePath("/tasks");
+};
+
+export const deleteTaskCustom = async (formData) => {
+  await new Promise((resolve) => setTimeout(resolve, 500));
+
+  const id = formData.get("id");
+  try {
+    await prisma.task.delete({
+      where: {
+        id,
+      },
+    });
+
+    revalidatePath("/tasks");
+    return { message: "success" };
+  } catch (error) {
+    return { message: "error" };
+  }
 };
 
 export const getTask = async (id) => {
