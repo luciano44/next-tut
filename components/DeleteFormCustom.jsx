@@ -19,20 +19,6 @@ const DeleteButton = () => {
 };
 
 const DeleteFormCustom = ({ id }) => {
-  // const [state, formAction] = useFormState(deleteTaskCustom, initialState);
-
-  // useEffect(() => {
-  //   console.log({ state });
-  //   if (state.message === "error") {
-  //     toast.error("Error, Task not Deleted");
-  //     return;
-  //   }
-  //   if (state.message) {
-  //     toast.success("Task Deleted");
-  //     return;
-  //   }
-  // }, [state]);
-
   return (
     <form action={deleteTaskCustom}>
       <input type="hidden" name="id" value={id} />
