@@ -61,7 +61,7 @@ export const deleteTask = async (formData) => {
 };
 
 export const deleteTaskCustom = async (formData) => {
-  await new Promise((resolve) => setTimeout(resolve, 500));
+  await new Promise((resolve) => setTimeout(resolve, 100));
 
   const id = formData.get("id");
   try {
